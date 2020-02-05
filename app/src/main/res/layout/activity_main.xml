@@ -84,7 +84,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -105,14 +105,14 @@
         app:layout_constraintTop_toBottomOf="@+id/aprBox">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/LoanRadio"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:checked="true"
             android:text="Loan" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/LeaseRadio"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Lease" />
@@ -140,7 +140,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
-        android:text="0"
+        android:text="1"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.141"
@@ -148,7 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/monthBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -156,6 +156,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:max="60"
+        android:progress="1"
         android:scrollbarSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -171,11 +173,12 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:onClick="calculate"
         android:text="CALCULATE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/monthBar" />
 
     <TextView
         android:id="@+id/textView4"
@@ -195,15 +198,17 @@
 
     <EditText
         android:id="@+id/payBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="221dp"
+        android:layout_height="63dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
